@@ -1,9 +1,26 @@
-@import "@fontsource/estedad/400.css";
-@import "@fontsource/estedad/900.css";
+@import "@fontsource-variable/estedad";
+
+@font-face {
+	font-family: "Helvetica (Estedad Metrics)";
+	src: local(Helvetica);
+	size-adjust: 93%;
+	ascent-override: normal;
+	descent-override: normal;
+	line-gap-override: 46%;
+}
+
+@font-face {
+	font-family: "Arial (Estedad Metrics)";
+	src: local(Arial);
+	size-adjust: 93%;
+	ascent-override: normal;
+	descent-override: normal;
+	line-gap-override: 46%;
+}
 
 :root {
 	color-scheme: light dark;
-	--theme-dark: oklch(0.10 0.12 305);
+	--theme-dark: oklch(0.1 0.12 305);
 	--theme-light: oklch(0.99 0.015 300);
 
 	--background: light-dark(var(--theme-light), var(--theme-dark));
@@ -13,7 +30,9 @@
 body {
 	background-color: var(--background);
 	color: var(--foreground);
-	font-family: "Estedad", "Helvetica Neue", Helvetica, sans-serif;
+	font-family:
+		"Estedad Variable", "Helvetica (Estedad Metrics)",
+		"Arial (Estedad Metrics)", Helvetica, sans-serif;
 }
 
 main {
@@ -60,6 +79,7 @@ a {
 	text-underline-offset: 3px;
 
 	color: light-dark(oklch(50% 0.1 242), oklch(85% 0.1 242));
+
 	&:visited {
 		color: light-dark(oklch(50% 0.1 275), oklch(85% 0.1 300));
 	}
